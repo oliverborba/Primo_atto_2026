@@ -1,7 +1,12 @@
 import { Smile } from 'lucide-react';
-import { trackAgendaClick } from '../utils/analytics';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 export const CTASection = () => {
+  const handleWhatsAppClick = () => {
+    // Rastrear clique como conversão
+    trackWhatsAppClick();
+  };
+
   return (
     <section className="container mx-auto px-6 py-20">
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-3xl p-12 text-center text-white">
@@ -12,10 +17,10 @@ export const CTASection = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://wa.me/5521994021137?text=Olá! Gostaria de falar com a equipe."
+            href="https://wa.me/5521994021137?text=Olá! Gostaria de falar com a equipe sobre terapias para meu filho."
             target="_blank"
             rel="noopener noreferrer"
-            onClick={trackAgendaClick}
+            onClick={handleWhatsAppClick}
             className="bg-white text-blue-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
           >
             Falar com a Equipe

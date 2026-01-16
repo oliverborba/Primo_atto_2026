@@ -1,4 +1,10 @@
+import { trackWhatsAppClick } from '../utils/analytics';
+
 export const Footer = () => {
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick();
+  };
+
   return (
     <footer className="container mx-auto px-6 py-12 border-t border-gray-200 bg-white/80">
       <div className="text-center">
@@ -22,6 +28,7 @@ export const Footer = () => {
               href="https://wa.me/5521994021137"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
               className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors"
             >
               📱 WhatsApp: (21) 99402-1137
