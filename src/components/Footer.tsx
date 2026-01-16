@@ -1,6 +1,8 @@
 import { trackWhatsAppClick } from '../utils/analytics';
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   const handleWhatsAppClick = () => {
     trackWhatsAppClick();
   };
@@ -65,7 +67,7 @@ export const Footer = () => {
           </p>
         </div>
 
-        <p className="text-sm text-gray-400 mt-4">© 2025 Primo Atto Terapias. Todos os direitos reservados.</p>
+        <p className="text-sm text-gray-400 mt-4">© {currentYear} Primo Atto Terapias. Todos os direitos reservados.</p>
       </div>
     </footer>
   );
