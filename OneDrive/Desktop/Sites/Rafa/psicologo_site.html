@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rafael Marrero Brignol - Psicólogo Clínico</title>
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #d4d4d4;
+        }
+
+        .hero {
+            background-color: #d4d4d4;
+            color: #333;
+            text-align: center;
+            padding:50px 30px 50px;
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('sua-imagem-decorativa.png');
+            background-position: bottom left;
+            background-repeat: no-repeat;
+            background-size: 40%;
+        }   
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            font-weight: 400;
+            margin-bottom: 5px;
+            color: #2c2c2c;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.4em;
+            margin: 15px 0;
+            color: #4a4a4a;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #4a7c59;
+            color: white;
+            padding: 16px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 30px;
+            font-weight: 500;
+            font-size: 1.05em;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #3d6849;
+            transform: translateY(-2px);
+        }
+
+        .hero-info {
+            margin-top: 3cqmax;
+            font-size: 1.05em;
+            color: #4a4a4a;
+        }
+
+        .hero-info p {
+            margin: 8px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 40px 60px;
+        }
+
+        section:nth-child(even) {
+            background-color: #fff;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            font-weight: 400;
+            color: #2c2c2c;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #2c2c2c;
+            font-size: 1.3em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #4a4a4a;
+            font-size: 1.05em;
+            text-align: justify;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .about-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            background-color: #e8e8e8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85em;
+            color: #666;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .consultorio-section {
+            background-color: #f5f5f5;
+            text-align: left;
+            padding: 80px 60px !important;
+        }
+
+        .consultorio-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .consultorio-text {
+            flex: 1;
+            max-width: 550px;
+        }
+
+        .consultorio-text h2 {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .consultorio-image-container {
+            flex: 1;
+            position: relative;
+        }
+
+        .consultorio-image {
+            width: 100%;
+            max-width: 400px;
+            height: 320px;
+            background-color: #e8e8e8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.95em;
+            text-align: center;
+            padding: 30px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .consultorio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .modalidades-section {
+            background-color: #fff;
+            padding: 40px 60px !important;
+        }
+
+        .modalidades-section h2 {
+            margin-bottom: 30px;
+        }
+
+        .modalidade-item {
+            max-width: 1100px;
+            margin: 0 auto 40px;
+        }
+
+        .modalidade-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .modalidade-item p {
+            text-align: left;
+        }
+
+        .quote-section {
+            background-color: #f0f0f0;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.6em;
+            padding: 80px 60px !important;
+            color: #2c2c2c;
+        }
+
+        .quote-section p {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #2c2c2c;
+            text-align: center;
+        }
+
+        .quote-author {
+            font-size: 0.65em;
+            font-style: normal;
+            margin-top: 30px;
+            color: #4a4a4a;
+        }
+
+        .testimonials-section {
+            background-color: #4a7c59;
+            padding: 60px 60px !important;
+        }
+
+        .testimonials-section h2 {
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: transparent;
+            padding: 0;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.05em;
+        }
+
+        .testimonial-author {
+            font-weight: 400;
+            color: white;
+            font-size: 0.95em;
+        }
+
+        .contact-section {
+            background-color: #f5f5f5;
+            padding: 50px 60px 30px !important;
+        }
+
+        .contact-content {
+            display: flex;
+            gap: 80px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: flex-start;
+        }
+
+        .contact-info-left {
+            flex: 1;
+        }
+
+        .contact-info-left h2 {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            margin-bottom: 25px;
+        }
+
+        .contact-item h3 {
+            margin-top: 0;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            margin-bottom: 8px;
+            text-align: left;
+            color: #4a4a4a;
+        }
+
+        .contact-map {
+            flex: 1;
+            min-height: 400px;
+        }
+
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .alert-box {
+            background-color: #f0ede8;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .alert-box p {
+            color: #4a4a4a;
+            margin: 8px 0;
+            text-align: center;
+        }
+
+        .alert-box strong {
+            color: #2c2c2c;
+            font-size: 1.1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #4a4a4a;
+            font-size: 0.95em;
+            background: #e8e8e8;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #4a7c59;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #3d6849;
+        }
+
+        @media (max-width: 968px) {
+            .hero {
+                min-height: 100vh;
+                padding: 60px 20px;
+                background-size: 60%;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8em;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2em;
+            }
+
+            .hero-info {
+                font-size: 0.95em;
+                margin-top: 40px;
+            }
+
+            section {
+                padding: 50px 25px !important;
+            }
+
+            h2 {
+                font-size: 2em;
+                margin-bottom: 35px;
+            }
+
+            .about-content,
+            .consultorio-content,
+            .contact-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .about-images {
+                justify-content: center;
+            }
+
+            .profile-image {
+                width: 140px;
+                height: 140px;
+            }
+
+            .consultorio-text h2 {
+                text-align: center;
+            }
+
+            .consultorio-text p {
+                text-align: center;
+            }
+
+            .consultorio-image {
+                max-width: 100%;
+                height: 250px;
+            }
+
+            .contact-info-left h2 {
+                text-align: center;
+            }
+
+            .contact-item p {
+                text-align: center;
+            }
+
+            .contact-map {
+                min-height: 300px;
+            }
+
+            .testimonials {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .quote-section {
+                font-size: 1.3em;
+                padding: 60px 30px !important;
+            }
+
+            .cta-button {
+                padding: 14px 35px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.1em;
+            }
+
+            .about-images {
+                align-items: center;
+            }
+
+            .profile-image {
+                width: 160px;
+                height: 160px;
+            }
+
+            section {
+                padding: 40px 20px !important;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Rafael Marrero Brignol</h1>
+                <p class="subtitle">Psicólogo Clínico</p>
+                <a
+                    href="https://wa.me/5521994021137?text=Olá,%20Rafael%20Marrero!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sessão."
+                    class="cta-button" target="_blank">
+                    <span>Agendar sessão</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+                <div class="hero-info">
+                    <p><strong>Endereço:</strong> R. Barata Ribeiro, 774 - sl
+                        409 e 410 - Copacabana, Rio de Janeiro</p>
+                    <p><strong>Telefone:</strong> (21) 99402-1137</p>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <h2>Sobre mim</h2>
+                <div class="about-content">
+                    <div class="about-images">
+                        <div class="profile-image">
+                            <img
+                                src="/Imagens/preview.webp"
+                                alt="Foto do psicólogo Rafael Marrero Brignol">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p>Olá, seja bem-vindo(a)! Graduado em Psicologia desde
+                            2012, com ampla experiência na saúde pública e na
+                            clínica privada, especializado no atendimento de
+                            adolescentes e adultos. Minha prática é fundamentada
+                            na Terapia Cognitivo-Comportamental (TCC), uma
+                            abordagem científica eficaz no tratamento de
+                            diversos transtornos psicológicos.</p>
+                        <p>Possuo experiência no tratamento de transtornos de
+                            ansiedade, depressão, autoestima, processo de luto e
+                            gestão de estresse. Atuei na rede pública de saúde
+                            conduzindo grupos terapêuticos entre 2017 e
+                            2020.</p>
+                        <p>Formação adicional: Mestrado em Educação (UFPEL) e
+                            Especialização em Terapia Cognitivo-Comportamental
+                            (IESLA), proporcionando base teórica e prática
+                            sólida.</p>
+                        <p>Com mais de 10 anos de experiência clínica,
+                            atualmente dedico-me ao atendimento clínico
+                            particular, oferecendo um espaço seguro e acolhedor
+                            para adolescentes e adultos com foco no
+                            desenvolvimento emocional e na superação de
+                            dificuldades.</p>
+                        <a
+                            href="https://wa.me/5521994021137?text=Olá,%20Rafael%20Marrero!%20Vi%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20sessão."
+                            class="cta-button" target="_blank">
+                            <span>Mande uma mensagem</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                    fill="currentColor" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="consultorio-section">
+            <div class="consultorio-content">
+                <div class="consultorio-text">
+                    <h2>Sinta-se acolhido(a) em meu consultório.</h2>
+                    <p>Aqui você encontrará um espaço confortável e
+                        tranquilo.</p>
+                    <p>Com o atendimento presencial, você pode desfrutar de um
+                        consultório preparado para proporcionar segurança e
+                        introspecção durante o processo terapêutico. Um espaço
+                        pensado para que você se sinta acolhido desde a
+                        chegada.</p>
+                    <a
+                        href="https://wa.me/5521994021137?text=Olá,%20Rafael%20Marrero!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sessão."
+                        class="cta-button" target="_blank">
+                        <span>Agendar sessão</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="consultorio-image-container">
+                    <div class="consultorio-image">
+                        <img src="/Imagens/WhatsApp Image 2026-01-28 at 17.37.09 (1).jpeg" alt="Imagem do consultório de Rafael Marrero Brignol">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modalidades-section">
+            <div class="container">
+                <h2>Modalidades de terapia:</h2>
+
+                <div class="modalidade-item">
+                    <h3>Terapia Cognitivo-Comportamental</h3>
+                    <p>A abordagem utilizada é baseada na Teoria Cognitiva
+                        desenvolvida por Aaron Beck, que considera a conexão
+                        entre pensamentos, emoções e comportamentos.</p>
+                    <p><strong>Principais técnicas utilizadas:</strong> Registro
+                        de pensamentos disfuncionais, Reestruturação cognitiva,
+                        Questionamento socrático, Experimentos comportamentais e
+                        Psicoeducação.</p>
+                    <p>O objetivo é desenvolver habilidades de automonitoramento
+                        e autorregulação, promovendo mudanças consistentes e
+                        duradouras.</p>
+                </div>
+
+                <div class="modalidade-item">
+                    <h3>Áreas de Especialização</h3>
+                    <p>Atendimento de adolescentes e adultos para diversas
+                        demandas emocionais, utilizando técnicas da TCC.</p>
+
+                    <p><strong>Transtornos de Ansiedade:</strong> Incluem TAG,
+                        pânico, fobias e ansiedade social. Caracterizados por
+                        preocupação excessiva, tensão e sintomas físicos como
+                        taquicardia. O tratamento foca em identificar gatilhos,
+                        reestruturar pensamentos ansiosos e desenvolver
+                        estratégias de enfrentamento.</p>
+
+                    <p><strong>Depressão e Transtornos do Humor:</strong>
+                        Condição que afeta humor, pensamento e comportamento,
+                        causando tristeza persistente, perda de interesse e
+                        fadiga. A TCC trabalha modificando padrões de pensamento
+                        negativos e promovendo ativação comportamental para
+                        recuperar o prazer nas atividades.</p>
+
+                    <p><strong>Autoestima e Autoconfiança:</strong> Baixa
+                        autoestima contribui para ansiedade e dificuldades nos
+                        relacionamentos. O trabalho terapêutico identifica
+                        crenças limitantes, constrói uma autoimagem mais
+                        positiva e desenvolve habilidades de comunicação
+                        assertiva.</p>
+
+                    <p><strong>Gestão de Estresse:</strong> O estresse crônico
+                        impacta saúde física e mental. A terapia ensina a
+                        identificar gatilhos, modificar respostas e desenvolver
+                        estratégias como técnicas de respiração, planejamento de
+                        tarefas e definição de limites pessoais.</p>
+
+                    <p><strong>Processo de Luto:</strong> Resposta natural à
+                        perda de alguém ou algo significativo. O acompanhamento
+                        oferece espaço seguro para processar emoções, validar
+                        sentimentos e ajudar na adaptação à nova realidade,
+                        promovendo reintegração saudável da experiência.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <p>"O pensamento é o escultor que pode criar a pessoa que você quer ser."</p>
+            <div class="quote-author">- Henry David Thoreau</div>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-content">
+                <div class="contact-info-left">
+                    <h2>Contato</h2>
+
+                    <div class="contact-item">
+                        <h3>Endereço</h3>
+                        <p>R. Barata Ribeiro, 774 - sl 409 e 410</p>
+                        <p>Copacabana, Rio de Janeiro - RJ</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>Telefone e e-mail</h3>
+                        <p>(21) 99402-1137</p>
+                        <p>rafael.marrero@example.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.2789276054847!2d-43.19523522389624!3d-22.976114739145844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f3d6ccac047%3A0xa4251c09f0e88b35!2sR.%20Barata%20Ribeiro%2C%20774%20-%20sl%20409%20e%20410%20-%20Copacabana%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022051-002!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="alert-box">
+                <p><strong>Atenção:</strong> Este site não oferece atendimento
+                    imediato a pessoas com ideação suicida.</p>
+                <p>Em caso de crise ligue para o <strong>CVV - 188</strong></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© <span id="year"></span> Rafael Marrero Brignol – Psicólogo
+                Clínico CRP 05/67479</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Desenvolvido por <a
+                    href="https://www.linkedin.com/in/lucas-oliveira-de-borba-65897a363/"
+                    target="_blank">Lucas Oliveira de Borba</a></p>
+        </footer>
+
+        <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    </body>
+</html>
