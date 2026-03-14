@@ -1,0 +1,32 @@
+# Arquivo robots.txt para Primo Atto Terapias
+# Última atualização: 2026-01-16
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /search/
+Disallow: /api/
+
+# Direcionamento para Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Direcionamento para Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Direcionamento para outros crawlers
+User-agent: *
+Crawl-delay: 1
+Request-rate: 30/60
+
+# Sitemap
+Sitemap: https://primoattoterapias.com.br/sitemap.xml
+
+# Comentário: Este arquivo controla o acesso dos bots de busca ao site
+# Para mais informações sobre robots.txt, visite: https://www.robotstxt.org/

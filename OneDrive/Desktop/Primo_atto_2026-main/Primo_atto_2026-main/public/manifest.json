@@ -1,0 +1,65 @@
+{
+  "name": "Primo Atto Terapias",
+  "short_name": "Primo Atto",
+  "description": "Equipe multidisciplinar especializada em desenvolvimento infantil, TEA, fonoaudiologia, psicologia, musicoterapia e terapia ocupacional no Rio de Janeiro.",
+  "start_url": "https://primoattoterapias.com.br/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["medical", "health"],
+  "screenshots": [
+    {
+      "src": "/logo.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Especialidades",
+      "short_name": "Especialidades",
+      "description": "Conheça nossas especialidades",
+      "url": "https://primoattoterapias.com.br/#especialidades",
+      "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Equipe",
+      "short_name": "Equipe",
+      "description": "Conheça nossa equipe de profissionais",
+      "url": "https://primoattoterapias.com.br/#equipe",
+      "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

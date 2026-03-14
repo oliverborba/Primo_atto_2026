@@ -1,0 +1,10 @@
+# Redirecionamentos para SEO
+
+# Redirecionar WWW para não-WWW
+http://www.primoattoterapias.com.br/* https://primoattoterapias.com.br/:splat 301!
+
+# Redirecionar HTTP para HTTPS
+http://primoattoterapias.com.br/* https://primoattoterapias.com.br/:splat 301!
+
+# Garantir SPA funcione corretamente
+/* /index.html 200

@@ -1,0 +1,181 @@
+# Primo Atto Terapias - Site Oficial
+
+Projeto de site para a clínica **Primo Atto Terapias**, especializada em desenvolvimento infantil e intervenções terapêuticas multidisciplinares.
+
+## 🚀 Funcionalidades
+
+- ✨ Design moderno e responsivo com Tailwind CSS
+- 🎯 Exibição de especialidades e serviços
+- 👥 Página com informações da equipe
+- 📱 Integração com WhatsApp para agendamentos
+- 🔄 Navegação entre páginas (Home e Detalhes de Especialidades)
+- 📊 Seção de depoimentos de pacientes
+- 🎨 Gradientes e animações suaves
+- 🔍 **SEO Completo** - Meta tags, Schema.org, Sitemap, Analytics
+- 🔐 **Segurança** - HTTPS, Security headers, CSP
+- ⚡ **Performance** - Code splitting, Gzip, Cache otimizado
+
+## 🔍 SEO & Otimizações
+
+**Este projeto inclui otimizações técnicas de SEO de primeira categoria:**
+
+- ✅ Meta tags otimizadas (15+)
+- ✅ Schema.org estruturado (MedicalBusiness + LocalBusiness)
+- ✅ Open Graph & Twitter Cards
+- ✅ Sitemap.xml e robots.txt
+- ✅ Web App Manifest (PWA)
+- ✅ Google Ads conversion tracking
+- ✅ Google Analytics avançado
+- ✅ Core Web Vitals otimizados
+- ✅ Mobile-first design
+- ✅ Security headers completos
+
+**📚 Documentação completa em:** [INDEX.md](./INDEX.md) ou [README_SEO.md](./README_SEO.md)
+
+## 🛠️ Tecnologias
+
+- **React** - Biblioteca JavaScript
+- **TypeScript** - Type safety
+- **Vite** - Build tool rápido
+- **Tailwind CSS** - Styling
+- **Lucide React** - Icons
+
+## ⚡ Quick Start
+
+### Desenvolvimento
+
+```bash
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
+npm run dev
+
+# Acessar http://localhost:5173
+```
+
+### Build & Deploy
+
+```bash
+# Criar build otimizado
+npm run build
+
+# Testar build localmente
+npm run preview
+
+# Deploy (Netlify)
+npm install -g netlify-cli
+netlify deploy --prod --dir=dist
+```
+
+**📖 Guia completo:** [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+
+## 📁 Estrutura do Projeto
+
+```
+primo-atto-terapias/
+├── public/                    # Arquivos estáticos
+│   ├── sitemap.xml           # Mapa do site
+│   ├── robots.txt            # Controle de crawling
+│   ├── manifest.json         # PWA manifest
+│   ├── _headers              # Headers HTTP
+│   ├── _redirects            # Redirecionamentos
+│   └── .htaccess             # Apache config
+├── src/
+│   ├── components/           # Componentes reutilizáveis
+│   │   ├── Header.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── EspecialidadesSection.tsx
+│   │   ├── EquipeSection.tsx
+│   │   ├── MetodologiasSection.tsx
+│   │   ├── DepoimentosSection.tsx
+│   │   ├── CTASection.tsx
+│   │   ├── Footer.tsx
+│   │   └── EspecialidadeDetalhes.tsx
+│   ├── pages/               # Páginas completas
+│   │   ├── HomePage.tsx
+│   │   └── EspecialidadePage.tsx
+│   ├── data/                # Dados estáticos
+│   │   ├── especialidades.ts
+│   │   ├── equipe.ts
+│   │   ├── metodologias.ts
+│   │   ├── especialidadesContent.ts
+│   │   ├── depoimentos.ts
+│   │   └── seo.ts           # Configuração SEO
+│   ├── utils/               # Utilitários
+│   │   ├── analytics.ts     # Tracking avançado
+│   │   └── seo.ts           # Hooks SEO
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   └── vite-env.d.ts
+├── dist/                    # Build output
+├── index.html              # HTML com meta tags otimizadas
+├── package.json
+├── tsconfig.json
+├── vite.config.ts         # Otimizações de build
+├── tailwind.config.js
+├── postcss.config.js
+├── INDEX.md               # Índice de documentação
+├── QUICK_REFERENCE.md     # Resumo 5 min
+├── SUMMARY.md             # Resumo executivo
+├── DEPLOYMENT_GUIDE.md    # Guia passo a passo
+├── SEO_IMPLEMENTATION.md  # Checklist técnico
+├── SEO_GUIDE.md           # Guia técnico detalhado
+└── README.md              # Este arquivo
+```
+
+## 🚀 Instalação e Execução
+
+### Pré-requisitos
+- Node.js 16+
+- npm ou yarn
+
+### Passos
+
+1. **Instale as dependências:**
+```bash
+npm install
+```
+
+2. **Execute em desenvolvimento:**
+```bash
+npm run dev
+```
+
+3. **Build para produção:**
+```bash
+npm run build
+```
+
+4. **Preview da build:**
+```bash
+npm run preview
+```
+
+## 📋 Especialidades
+
+- Transtorno do Espectro Autista (TEA)
+- Terapia Ocupacional
+- Fonoaudiologia
+- Psicologia Clínica
+- Musicoterapia
+
+## 🎯 Equipe
+
+- **Laísa Borba** - Terapeuta Ocupacional
+- **Guilherme Gonçalves** - Fonoaudiólogo
+- **Rafael Marrero Brignol** - Psicólogo Clínico | Musicoterapeuta
+
+## 📞 Contato
+
+- **WhatsApp:** (21) 99402-1137
+- **Endereço:** Rua Barata Ribeiro, 774 - Copacabana - Rio de Janeiro
+
+## 📄 Licença
+
+© 2026 Primo Atto Terapias. Todos os direitos reservados.
+
+---
+
+**Repositório:** [github.com/oliverborba/Primo_atto_2026](https://github.com/oliverborba/Primo_atto_2026)

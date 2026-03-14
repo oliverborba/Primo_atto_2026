@@ -1,0 +1,43 @@
+# Headers de segurança e SEO para Primo Atto Terapias
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+# Segurança
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "SAMEORIGIN"
+X-XSS-Protection = "1; mode=block"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Performance e Caching
+Cache-Control = "public, max-age=3600"
+Vary = "Accept-Encoding"
+
+# SEO
+Link = "</sitemap.xml>; rel=sitemap"
+
+[[headers]]
+for = "/index.html"
+
+[headers.values]
+Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+for = "/*.js"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.css"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.{png,jpg,jpeg,gif,svg}"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
