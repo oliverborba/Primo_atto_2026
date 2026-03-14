@@ -9,7 +9,7 @@ export const usePageTracking = (pagePath: string, pageTitle: string) => {
   const trackWhatsAppClick = () => {
     if (typeof (window as any).gtag !== 'undefined') {
       (window as any).gtag('event', 'conversion', {
-        // ID Oficial da Primo Atto + O Rótulo que você copiou agora
+        // ID Oficial da Primo Atto + O Rótulo que você copiou agora"
         'send_to': 'AW-16570621298/COLE_AQUI_O_ROTULO_DE_CONVERSAO', 
       });
       console.log("Conversão enviada: Lead de WhatsApp registrado.");
